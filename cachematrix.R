@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-## Alex's attempt
-## Write a short comment describing this function
+## This function takes a matrix as an input and returns a list of 4 functions defined in order to work
+## with the matrix.  One function sets the matrix or changes it, the second returns it, the third assigns
+## a value for the inverse of the matrix, and the fourth returns that value.
 
 makeCacheMatrix <- function(x = matrix()) {
         inv = NULL
@@ -17,11 +16,13 @@ makeCacheMatrix <- function(x = matrix()) {
              getinv = getinv)
 }
 
-## Write a short comment describing this function
+## This function takes the sort of list produced by makeCacheMatrix as an input and returns the inverse 
+## of the matrix assigned to it, either by calculating it, or looking up the value associated with it
+## through the makeCacheMatrix function.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-        inv <- x.getinv()
+        inv <- x$getinv()
         if(!is.null(inv)) {
                 message("getting cached data")
                 return(inv)
